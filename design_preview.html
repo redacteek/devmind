@@ -13,13 +13,13 @@
       --panel:   #0f1420;
       --border:  #191f2e;
       --border2: #212c3d;
-      --accent:  #3b82f6;
-      --accent2: #6366f1;
+      --accent:  #8899b4;
+      --accent2: #6b7a94;
       --green:   #22c55e;
       --red:     #ef4444;
       --yellow:  #f59e0b;
       --purple:  #a855f7;
-      --cyan:    #06b6d4;
+      --cyan:    #5a7a8a;
       --text:    #dde3ef;
       --muted:   #4a5568;
       --muted2:  #7f8fa6;
@@ -37,8 +37,8 @@
     body::before {
       content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
       background-image:
-        linear-gradient(rgba(59,130,246,.018) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(59,130,246,.018) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.012) 1px, transparent 1px);
       background-size: 44px 44px;
     }
 
@@ -73,24 +73,24 @@
     .ib-lg svg  { width: 19px; height: 19px; }
 
     /* color tints on border + icon */
-    .ib-blue   { border-color: rgba(59,130,246,.25);  }
-    .ib-blue   svg { color: #60a5fa; }
+    .ib-blue   { border-color: rgba(136,153,180,.25);  }
+    .ib-blue   svg { color: #8899b4; }
     .ib-green  { border-color: rgba(34,197,94,.25);   }
     .ib-green  svg { color: #4ade80; }
     .ib-purple { border-color: rgba(168,85,247,.25);  }
     .ib-purple svg { color: #c084fc; }
     .ib-yellow { border-color: rgba(245,158,11,.25);  }
     .ib-yellow svg { color: #fbbf24; }
-    .ib-cyan   { border-color: rgba(6,182,212,.25);   }
-    .ib-cyan   svg { color: #22d3ee; }
+    .ib-cyan   { border-color: rgba(90,122,138,.25);   }
+    .ib-cyan   svg { color: #8899b4; }
     .ib-muted  { border-color: #1e2535; }
     .ib-muted  svg { color: #8899b4; }
 
     /* Logo icon special: gradient bg */
     .logo-ib {
       width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0;
-      background: linear-gradient(140deg, #1e40af, #4f46e5);
-      border: 1px solid rgba(99,102,241,.4);
+      background: #141a24;
+      border: 1px solid #2a3345;
       display: flex; align-items: center; justify-content: center;
     }
     .logo-ib svg { width: 17px; height: 17px; color: #fff; }
@@ -106,7 +106,7 @@
     .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: .96rem; letter-spacing: -.2px; }
     .logo-badge {
       font-family: var(--mono); font-size: .6rem; color: var(--accent);
-      background: rgba(59,130,246,.08); border: 1px solid rgba(59,130,246,.2);
+      background: rgba(136,153,180,.08); border: 1px solid rgba(136,153,180,.2);
       padding: 2px 8px; border-radius: 4px;
     }
     .topbar-center { display: flex; gap: 2px; }
@@ -115,12 +115,12 @@
       cursor: pointer; transition: background .15s, color .15s;
     }
     .nav-item:hover { background: var(--panel); color: var(--text); }
-    .nav-item.active { background: rgba(59,130,246,.1); color: var(--accent); }
+    .nav-item.active { background: rgba(136,153,180,.1); color: var(--accent); }
     .topbar-right { display: flex; align-items: center; gap: 14px; }
     .live-badge { display: flex; align-items: center; gap: 6px; font-size: .7rem; color: var(--green); font-family: var(--mono); }
     .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 7px var(--green); animation: pulse 2s ease-in-out infinite; }
     @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.25} }
-    .avatar { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg,#3730a3,#6d28d9); display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; border: 1px solid rgba(99,102,241,.4); }
+    .avatar { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg,#1e2535,#2a3345); display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; border: 1px solid #2a3345; }
 
     /* ━━━━━━━━━━━━━━━━ LAYOUT ━━━━━━━━━━━━━━━━ */
     .layout {
@@ -153,7 +153,7 @@
       font-family: var(--mono); font-size: .79rem;
       outline: none; transition: border-color .15s, box-shadow .15s;
     }
-    input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(59,130,246,.09); }
+    input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(136,153,180,.09); }
     input::placeholder { color: var(--muted); }
 
     .select-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -169,19 +169,19 @@
     .btn-run {
       display: flex; align-items: center; justify-content: center; gap: 9px;
       padding: 11px 16px; border: none; border-radius: 9px;
-      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      background: #1e2535;
       color: #fff; font-weight: 600; font-size: .87rem; font-family: var(--sans);
-      cursor: pointer; box-shadow: 0 4px 18px rgba(59,130,246,.28);
+      cursor: pointer; box-shadow: 0 4px 18px rgba(0,0,0,.5);
       transition: transform .1s, box-shadow .15s;
     }
-    .btn-run:hover { box-shadow: 0 6px 26px rgba(59,130,246,.42); }
+    .btn-run:hover { box-shadow: 0 6px 26px rgba(0,0,0,.6); }
     .btn-run:active { transform: scale(.97); }
     .btn-run svg { width: 15px; height: 15px; color: rgba(255,255,255,.9); }
 
     /* mini stats */
     .mini-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 7px; }
     .mini-stat { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 8px; text-align: center; }
-    .mini-stat-val { font-family: var(--mono); font-size: .95rem; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .mini-stat-val { font-family: var(--mono); font-size: .95rem; font-weight: 700; background: linear-gradient(135deg, #8899b4, #a0b4cc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .mini-stat-lbl { font-size: .6rem; color: var(--muted); margin-top: 2px; }
 
     /* file chips */
@@ -189,7 +189,7 @@
     .file-chip { display: flex; align-items: center; gap: 8px; padding: 5px 7px; border-radius: 5px; font-family: var(--mono); font-size: .69rem; color: var(--muted2); cursor: pointer; transition: background .1s; }
     .file-chip:hover { background: var(--surface); }
     .ext { font-size: .57rem; padding: 1px 5px; border-radius: 3px; font-weight: 700; border: 1px solid; }
-    .ext-py  { color: #60a5fa; border-color: rgba(96,165,250,.3); background: rgba(96,165,250,.07); }
+    .ext-py  { color: #8899b4; border-color: rgba(96,165,250,.3); background: rgba(96,165,250,.07); }
     .ext-md  { color: #c084fc; border-color: rgba(192,132,252,.3); background: rgba(192,132,252,.07); }
     .ext-yml { color: #fbbf24; border-color: rgba(251,191,36,.3); background: rgba(251,191,36,.07); }
     .ext-txt { color: var(--muted2); border-color: var(--border2); background: rgba(100,116,139,.07); }
@@ -210,10 +210,10 @@
     .t-title { font-family: var(--mono); font-size: .7rem; color: var(--muted); }
     .t-tags { display: flex; gap: 5px; }
     .t-tag { font-family: var(--mono); font-size: .6rem; padding: 2px 8px; border-radius: 4px; background: var(--surface); border: 1px solid var(--border2); color: var(--muted); }
-    .t-tag.active { border-color: rgba(59,130,246,.35); color: var(--accent); background: rgba(59,130,246,.07); }
+    .t-tag.active { border-color: rgba(136,153,180,.35); color: var(--accent); background: rgba(136,153,180,.07); }
 
     .progress-bar { height: 2px; background: var(--border); flex-shrink: 0; }
-    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--cyan)); animation: prog 2.4s ease-in-out infinite alternate; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #3d4c5e, #6b7a94); animation: prog 2.4s ease-in-out infinite alternate; }
     @keyframes prog { from{width:15%} to{width:88%} }
 
     .status-row { display: flex; align-items: center; gap: 8px; padding: 7px 18px; border-bottom: 1px solid var(--border); background: rgba(11,15,24,.7); flex-shrink: 0; }
@@ -235,8 +235,8 @@
     .explanation h2::after { content:''; flex:1; height:1px; background: linear-gradient(90deg, var(--border2), transparent); }
     .explanation p { color: var(--muted2); margin-bottom: 10px; }
     .explanation strong { color: var(--text); font-weight: 600; }
-    .highlight { color: #818cf8; font-weight: 600; }
-    .code-inline { font-family: var(--mono); font-size: .77rem; color: #22d3ee; background: rgba(6,182,212,.07); border: 1px solid rgba(6,182,212,.15); padding: 1px 6px; border-radius: 4px; }
+    .highlight { color: #8899b4; font-weight: 600; }
+    .code-inline { font-family: var(--mono); font-size: .77rem; color: #8899b4; background: rgba(90,122,138,.07); border: 1px solid rgba(90,122,138,.15); padding: 1px 6px; border-radius: 4px; }
     .explanation ul { padding-left: 18px; color: var(--muted2); }
     .explanation ul li { margin-bottom: 5px; }
     .explanation ul li::marker { color: var(--accent); }
@@ -255,17 +255,17 @@
     .repo-owner { font-size: .7rem; color: var(--muted); margin-top: 1px; }
     .repo-meta { display: flex; flex-wrap: wrap; gap: 5px; }
     .meta-badge { display: flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 20px; font-size: .66rem; border: 1px solid var(--border2); color: var(--muted2); }
-    .meta-badge.lang   { border-color: rgba(59,130,246,.3); color: #60a5fa; background: rgba(59,130,246,.05); }
+    .meta-badge.lang   { border-color: rgba(136,153,180,.3); color: #8899b4; background: rgba(136,153,180,.05); }
     .meta-badge.stars  { border-color: rgba(245,158,11,.3); color: #fbbf24; background: rgba(245,158,11,.05); }
     .meta-badge.forks  { border-color: rgba(34,197,94,.3);  color: #4ade80; background: rgba(34,197,94,.05); }
 
     .stack-grid { display: flex; flex-wrap: wrap; gap: 5px; }
     .stack-item { padding: 4px 10px; border-radius: 6px; font-size: .68rem; font-weight: 500; border: 1px solid; }
-    .s-py    { color: #60a5fa; border-color: rgba(96,165,250,.28); background: rgba(96,165,250,.05); }
+    .s-py    { color: #8899b4; border-color: rgba(96,165,250,.28); background: rgba(96,165,250,.05); }
     .s-gray  { color: #94a3b8; border-color: rgba(148,163,184,.28); background: rgba(148,163,184,.05); }
     .s-pur   { color: #c084fc; border-color: rgba(192,132,252,.28); background: rgba(192,132,252,.05); }
     .s-yel   { color: #fbbf24; border-color: rgba(251,191,36,.28); background: rgba(251,191,36,.05); }
-    .s-cyan  { color: #22d3ee; border-color: rgba(34,211,238,.28); background: rgba(34,211,238,.05); }
+    .s-cyan  { color: #8899b4; border-color: rgba(136,153,180,.28); background: rgba(136,153,180,.05); }
 
     /* timeline */
     .timeline { display: flex; flex-direction: column; }
@@ -284,9 +284,9 @@
     .conf-label { font-size: .7rem; color: var(--muted2); width: 86px; flex-shrink: 0; }
     .conf-bar { flex: 1; height: 4px; background: var(--border2); border-radius: 2px; overflow: hidden; }
     .conf-fill { height: 100%; border-radius: 2px; }
-    .cf-blue   { background: linear-gradient(90deg,#2563eb,#06b6d4); }
+    .cf-blue   { background: linear-gradient(90deg,#3d4c5e,#5a7a8a); }
     .cf-green  { background: linear-gradient(90deg,#16a34a,#22c55e); }
-    .cf-purple { background: linear-gradient(90deg,#6d28d9,#a855f7); }
+    .cf-purple { background: linear-gradient(90deg,#1e2535,#a855f7); }
     .cf-yellow { background: linear-gradient(90deg,#d97706,#f59e0b); }
     .conf-val { font-family: var(--mono); font-size: .65rem; color: var(--muted2); width: 28px; text-align: right; }
   </style>
@@ -608,7 +608,7 @@
     </div>
     <div class="repo-meta">
       <div class="meta-badge lang">
-        <span class="ib ib-xs ib-muted" style="border:none;background:transparent"><svg style="width:9px;height:9px;color:#60a5fa"><use href="#ic-python"/></svg></span>
+        <span class="ib ib-xs ib-muted" style="border:none;background:transparent"><svg style="width:9px;height:9px;color:#8899b4"><use href="#ic-python"/></svg></span>
         Python
       </div>
       <div class="meta-badge stars">
